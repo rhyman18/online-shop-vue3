@@ -1,5 +1,4 @@
 <script setup>
-import { defineEmits } from 'vue'
 import { useRoute } from 'vue-router'
 import Navbar from './Navbar.vue'
 import Price from './Price.vue'

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineEmits } from 'vue'
+import { ref } from 'vue'
 import ProductList from './ProductList.vue'
 import PriceSlider from './PriceSlider.vue'
 import Checkout from './Checkout.vue'

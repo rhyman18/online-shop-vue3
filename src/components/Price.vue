@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
     value: Number,
-    prefix: {
+    satuan: {
         type: String,
         default: 'Rp. '
     },
@@ -13,5 +13,5 @@ defineProps({
 </script>
 
 <template>
-    <b>{{ this.prefix + Number.parseFloat(this.value).toFixed(this.precision) }}</b>
+    <b>{{ this.satuan + Number.parseFloat(this.value).toFixed(this.precision) }}</b>
 </template>
