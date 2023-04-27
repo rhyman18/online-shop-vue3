@@ -29,7 +29,9 @@ function leave(e) {
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img :src="item.image" :alt="item.image_title" class="card-img-top">
+                        <router-link :to="{ name: 'Detail', params: { id: item.id } }" class="text-decoration-none">
+                            <img :src="item.image" :alt="item.image_title" class="card-img-top">
+                        </router-link>
                     </div>
                     <div class="col-md-8 d-flex align-items-center">
                         <div class="card-body">
@@ -38,7 +40,9 @@ function leave(e) {
                                     {{ item.name }}
                                 </router-link>
                             </h5>
-                            <p class="card-text" v-html="item.description"></p>
+                            <router-link :to="{ name: 'Detail', params: { id: item.id } }" class="text-decoration-none">
+                                <p class="card-text text-body" v-html="item.description"></p>
+                            </router-link>
                             <div class="d-flex justify-content-between align-items-center mt-lg-5 pe-lg-5">
                                 <price :value="Number(item.price)" />
                                 <button class="btn btn-primary" @click.stop="$emit('add-item', item)">Beli Sekarang</button>
