@@ -1,9 +1,17 @@
 <script setup>
 defineProps({
     value: Number,
+    prefix: {
+        type: String,
+        default: 'Rp. '
+    },
+    precision: {
+        type: Number,
+        default: 3
+    }
 })
 </script>
 
 <template>
-    <b>Rp. {{ Number.parseFloat(this.value).toFixed(3) }}</b>
+    <b>{{ prefix + Number.parseFloat(value).toFixed(precision) }}</b>
 </template>
